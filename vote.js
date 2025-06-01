@@ -35,7 +35,7 @@ async function loadNominees() {
 
       const isDisabled = hasVoted ? "disabled" : "";
       const btnClass = hasVoted ? "voted" : "vote";
-      const btnLabel = hasVoted ? "✅ Voted" : "Vote";
+      const btnLabel = hasVoted ? "Already Voted " : "Vote";
 
       nomineeCard.innerHTML = `
         <h3>@${data.username}</h3>
