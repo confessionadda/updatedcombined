@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🔥 Vote for Your Favourite Nominee</title>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <script>
+    // Initialize Firebase (your config)
+    const firebaseConfig = {
+      apiKey: "AIzaSyCK3nlpXHOUrTLfVKbO9o292dzn0gvzWBI",
+      authDomain: "confession-vote.firebaseapp.com",
+      projectId: "confession-vote",
+      storageBucket: "confession-vote.appspot.com",
+      messagingSenderId: "668697658094",
+      appId: "1:668697658094:web:051ae4fcd66529bab669ff"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <link rel="stylesheet" href="vote.css" />
+  <script defer src="vote.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 Vote for Your Favourite Nominee</h1>
+    <div id="nomineesList" class="nominee-list">
+      <p class="loading-text">Loading nominees...</p>
+    </div>
+  </div>
+</body>
+</html>

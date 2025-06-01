@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Voting Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #1B1B2F 0%, #27293D 100%);
+      color: #E1D9D1;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      background: #27293D;
+      padding: 40px 30px;
+      border-radius: 16px;
+      max-width: 420px;
+      width: 90vw;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      color: #C6B7A5;
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-shadow: 0 0 5px #1B1B2F;
+    }
+
+    .button {
+      background-color: #C6B7A5;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      color: #27293D;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin: 10px 0;
+      width: 100%;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 5px 12px rgba(198, 183, 165, 0.3);
+    }
+
+    .button:hover {
+      background-color: #A79987;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+
+      .button {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+
+      .container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Welcome to the Voting Portal 🎉</h1>
+    <button class="button" onclick="location.href='vote.html'">🗳️ Go to Voting Page</button>
+    <button class="button" onclick="location.href='result.html'">📊 View Results</button>
+  </div>
+</body>
+</html>

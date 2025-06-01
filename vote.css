@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #1B1B2F 0%, #27293D 100%);
+  color: #E1D9D1;
+  min-height: 100vh;
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+h1 {  
+  align-items: center;
+  color: #C6B7A5;
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+#nomineesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.nominee-card {
+  background: #27293D; /* slightly lighter dark background */
+  padding: 24px 28px;
+  border-radius: 14px;
+  width: 260px;
+  text-align: center;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  color: #E1D9D1;
+}
+
+.nominee-card:hover {
+  border-color: #C6B7A5;
+  transform: translateY(-6px);
+}
+
+.nominee-card h3 {
+  margin: 0 0 16px 0;
+  color: #C6B7A5;
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+}
+
+.nominee-card p {
+  margin: 0 0 24px 0;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #E1D9D1;
+  letter-spacing: 0.02em;
+}
+
+.nominee-card button {
+  background-color: #C6B7A5;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 12px;
+  color: #27293D;
+  font-weight: 600;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nominee-card button:hover:not(:disabled) {
+  background-color: #A79987; /* slightly darker beige */
+}
+
+.nominee-card button:disabled {
+  background-color: #3A3746;
+  cursor: not-allowed;
+  color: #7E746C;
+}
+
+@media (max-width: 600px) {
+  #nomineesList {
+    gap: 18px;
+  }
+
+  .nominee-card {
+    width: 90vw;
+    padding: 20px 22px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .nominee-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .nominee-card p, .nominee-card button {
+    font-size: 1rem;
+  }
+}

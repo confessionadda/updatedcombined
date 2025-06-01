@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Results</title>
+  <link rel="stylesheet" href="result.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="firebase.js"></script>
+  <script defer src="result.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🏆 Live Results</h1>
+    <ol id="resultList"></ol>
+  </div>
+
+  <!-- Snowflake Animation -->
+  <script>
+    function createSnowflake() {
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      const size = Math.random() * 4 + 2 + 'px';
+      snowflake.style.width = size;
+      snowflake.style.height = size;
+      snowflake.style.left = Math.random() * window.innerWidth + 'px';
+      const duration = Math.random() * 10 + 5;
+      snowflake.style.animationDuration = duration + 's';
+      snowflake.style.animationDelay = Math.random() * 15 + 's';
+      document.body.appendChild(snowflake);
+      setTimeout(() => snowflake.remove(), duration * 1000);
+    }
+
+    setInterval(createSnowflake, 100);
+  </script>
+</body>
+</html>
