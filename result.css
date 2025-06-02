@@ -15,15 +15,15 @@ body {
   padding: 20px;
 }
 
-/* Container - wider and taller */
+/* Container */
 .container {
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(200, 150, 255, 0.1);
-  max-width: 700px;
+  max-width: 500px;
   margin: 40px auto;
-  padding: 30px 30px;
+  padding: 30px 25px;
   z-index: 2;
   position: relative;
 }
@@ -31,15 +31,15 @@ body {
 /* Title */
 h1 {
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 25px;
+  font-size: 2rem;
+  margin-bottom: 20px;
   color: #f8f6ff;
   text-shadow: 0 0 10px #9d7dff;
 }
 
-/* Scrollable results area */
+/* Scrollable list */
 .results-scroll {
-  max-height: 500px;
+  max-height: 400px;
   overflow-y: auto;
   padding-right: 10px;
 }
@@ -53,24 +53,21 @@ h1 {
   border-radius: 10px;
 }
 
-/* Result items */
-#resultList div {
+/* Result list items */
+ol {
+  list-style-position: inside;
+}
+
+#resultList li {
   background: rgba(255, 255, 255, 0.07);
-  margin-bottom: 12px;
-  padding: 12px 18px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
   border-radius: 12px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: transform 0.2s ease;
-  position: relative;
 }
 
-#resultList div::before {
-  content: "@";
-  margin-right: 6px;
-  color: #bdbdf7;
-}
-
-#resultList div:hover {
+#resultList li:hover {
   transform: scale(1.02);
   background: rgba(255, 255, 255, 0.15);
 }
@@ -92,4 +89,5 @@ h1 {
     opacity: 0;
   }
 }
+
 
