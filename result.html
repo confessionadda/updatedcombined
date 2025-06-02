@@ -1,16 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Results</title>
-  <link rel="stylesheet" href="result.css" />
+  <link rel="stylesheet" href="style-result.css">
 
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-  <script src="firebase.js"></script>
-  <script src="result.js"></script>
+ 
 </head>
 <body>
   <div class="container">
@@ -18,23 +15,46 @@
     <ol id="resultList"></ol>
   </div>
 
-  <!-- Snowflake Animation -->
-  <script>
-    function createSnowflake() {
-      const snowflake = document.createElement('div');
-      snowflake.classList.add('snowflake');
-      const size = Math.random() * 4 + 2 + 'px';
-      snowflake.style.width = size;
-      snowflake.style.height = size;
-      snowflake.style.left = Math.random() * window.innerWidth + 'px';
-      const duration = Math.random() * 10 + 5;
-      snowflake.style.animationDuration = duration + 's';
-      snowflake.style.animationDelay = Math.random() * 15 + 's';
-      document.body.appendChild(snowflake);
-      setTimeout(() => snowflake.remove(), duration * 1000);
-    }
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+  <script src="firebase.js"></script>
+  <script src="result.js"></script>
 
-    setInterval(createSnowflake, 100);
-  </script>
+  <body>
+    <div class="container">
+      <!-- Yahan tera form ya content hoga -->
+    </div>
+  
+    <script>
+      function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        
+        // Random size between 2px and 6px
+        const size = Math.random() * 4 + 2 + 'px';
+        snowflake.style.width = size;
+        snowflake.style.height = size;
+        
+        // Random horizontal position across the screen
+        snowflake.style.left = Math.random() * window.innerWidth + 'px';
+        
+        // Random animation duration between 5s and 15s
+        const duration = Math.random() * 10 + 5;
+        snowflake.style.animationDuration = duration + 's';
+        
+        // Random animation delay so they don't all start at once
+        snowflake.style.animationDelay = Math.random() * 15 + 's';
+        
+        document.body.appendChild(snowflake);
+        
+        // Remove snowflake after animation duration ends
+        setTimeout(() => {
+          snowflake.remove();
+        }, duration * 1000);
+      }
+  
+      // Create 10 snowflakes every second (100 ms gap)
+      setInterval(createSnowflake, 100);
+    </script> 
 </body>
 </html>
