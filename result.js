@@ -1,4 +1,4 @@
-const resultList = document.getElementById("nominations");
+const resultList = document.getElementById("resultList");
 
 db.collection("nominations")
   .orderBy("votes", "desc")
